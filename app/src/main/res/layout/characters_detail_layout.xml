@@ -1,0 +1,54 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="relatedTopic" type="com.dheeraj.xfinity.data.RelatedTopic"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/character_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:image="@{relatedTopic.Icon.URL}" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/character_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignEnd="@+id/character_image"
+                android:layout_toEndOf="@+id/character_image"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textStyle="bold"
+                app:setName="@{relatedTopic.Text}"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/event_venue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignEnd="@+id/character_image"
+                android:layout_toEndOf="@+id/character_image"
+                android:layout_below="@+id/character_title"
+                android:paddingTop="5dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:setDescription="@{relatedTopic.Text}"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>
+

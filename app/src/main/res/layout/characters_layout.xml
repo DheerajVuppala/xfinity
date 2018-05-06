@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="showGrid" type="Boolean"/>
+    </data>
+
+    <RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp"
+        tools:context="com.dheeraj.xfinity.view.SearchActivity">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/characters_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            app:setLayout="@{showGrid}"
+            android:layout_margin="10dp"/>
+
+    </RelativeLayout>
+
+</layout>
